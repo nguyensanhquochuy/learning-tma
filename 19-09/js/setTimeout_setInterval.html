@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example setTimeout</h3>
+    <button onclick="myVar=setTimeout(sayHello, 3000)">
+        Try it
+    </button>
+    <button onclick="clearTimeout(myVar)">
+        Stop it
+    </button>
+
+    <h3>Example setInterval</h3>
+    <button onclick="myVar=setInterval(sayHello, 3000)">
+        Try it
+    </button>
+    <button onclick="clearInterval(myVar)">
+        Stop it
+    </button>
+    <script>
+        function sayHello(){
+            alert("Hello");
+        }
+    </script>
+</body>
+</html>
