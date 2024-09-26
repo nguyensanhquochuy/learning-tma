@@ -1,4 +1,32 @@
 
+const student = {
+    name: 'Hao',
+    score: 10,
+    grade: 'A',
+}
+
+delete student.score
+student.grade = 'F'
+console.log(student)
+
+// student = {} // error, const
+
+
+// Objects as arguments
+const num = 9;
+const obj1 = {color: 'blue'};
+
+const changeIt = (num, obj) => {
+  num = 10;
+  obj.color = 'red';
+};
+
+changeIt(num, obj1);
+
+console.log(num); // passed by value --> output: 9 , no change
+
+console.log(obj1.color); // passed by reference  --> output: red, change
+
 function User(firstName, lastName, age) {
     this.firstName = firstName,
         this.lastName = lastName,
@@ -98,7 +126,7 @@ Object.defineProperty(obj, "add", {
 })
 Object.defineProperty(obj, "subtract", {
     set: function (value) {
-        this.counter-=value
+        this.counter -= value
     }
 })
 
@@ -111,7 +139,7 @@ obj.subtract = 2
 
 // Object.preventExtensions(obj);
 obj.color = 'Red'
-obj.func = function (){
+obj.func = function () {
     console.log('func')
 }
 obj.func()
