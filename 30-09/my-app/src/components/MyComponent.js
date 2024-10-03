@@ -57,11 +57,13 @@ const MyComponent = () => {
     ])
 
     const handleAddNewUser = (userObj) => {
-        setListUsers(...listUsers, userObj)
+        setListUsers([...listUsers, userObj])
     }
 
     const handleDeleteUser = (userId) => {
-
+        let listUsersClone = [...listUsers]
+        listUsersClone = listUsersClone.filter(item => item.id !== userId)
+        setListUsers(listUsersClone)
     }
     return (
         <div>

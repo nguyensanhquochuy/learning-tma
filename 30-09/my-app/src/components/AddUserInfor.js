@@ -98,6 +98,7 @@ const AddUserInfor = (props) => {
             name: name,
             age: age
         })
+
     }
 
     return (

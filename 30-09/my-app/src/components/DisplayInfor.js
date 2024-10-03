@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // class DisplayInfor extends React.Component {
 
@@ -98,6 +98,16 @@ const DisplayInfor = (props) => {
     const handleShowHide = () => {
         setIsShowHideListUser(!isShowHideListUser)
     }
+
+    console.log('>>>call me render')
+    useEffect(() => {
+        if (listUsers.length == 0) {
+            alert('You deleted all users')
+        }
+        console.log('>>>call me useEffect')
+    }, [listUsers]
+    )
+
     return (
         <div>
             <div>
